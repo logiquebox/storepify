@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-yx6%4c!031i)8ntjws6_iymjuhqb(#g+o#r2hwuee=#++3e=))'
+SECRET_KEY = 'django-insecure-k2^80g#6risrt$*4k%8m7xe4c9)dvrk4)+#dnui*6*!%n8(gj7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -20,20 +20,22 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django.contrib.sessions',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'tests',
     'debug_toolbar',
     'store',
     'tags',
     'likes',
+    'store_custom',
 ]
 
 MIDDLEWARE = [
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -43,11 +45,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-INTERNAL_IPS = [  
-    "127.0.0.1",
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
 ]
 
-ROOT_URLCONF = 'core.urls'
+ROOT_URLCONF = 'storefront.urls'
 
 TEMPLATES = [
     {
@@ -65,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+WSGI_APPLICATION = 'storefront.wsgi.application'
 
 
 # Database
@@ -77,8 +81,7 @@ DATABASES = {
         'NAME': 'storepify',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '85253346',
-
+        'PASSWORD': '85253346'
     }
 }
 
@@ -123,3 +126,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'COERCE_DECIMAL_TO_STRING': False
+}
