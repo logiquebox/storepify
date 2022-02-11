@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k2^80g#6risrt$*4k%8m7xe4c9)dvrk4)+#dnui*6*!%n8(gj7'
+SECRET_KEY = 'django-insecure-yx6%4c!031i)8ntjws6_iymjuhqb(#g+o#r2hwuee=#++3e=))'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -51,7 +51,7 @@ INTERNAL_IPS = [
     # ...
 ]
 
-ROOT_URLCONF = 'storefront.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'storefront.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database

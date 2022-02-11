@@ -5,7 +5,7 @@ import debug_toolbar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test', include('tests.urls')),
-    path('store', include('store.urls')),
+    path('test/', include('tests.urls')),
+    path('store/', include('store.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]

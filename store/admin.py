@@ -7,7 +7,7 @@ from store import models
 from store.models import Collection, Customer, Product, Order
 from urllib.parse import urlencode
 
-admin.site.site_header = 'Storefront Admin'
+admin.site.site_header = 'Storepify Admin'
 admin.site.index_title = 'Admin'
 
 class InventoryFilter(admin.SimpleListFilter):
